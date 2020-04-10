@@ -1,0 +1,17 @@
+<section id="services" class="services container section mx-auto">
+    <div>
+        <h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.service_title }}</h2>
+        <div class="services__items">
+            {% for service in this.theme.services %}
+                {% set index = loop.index %}
+                {% set position = index % 2 ? 'service--left': 'service--right'  %}
+                {% set default_image = 'assets/dist/images/service'~index~'.svg' %}
+                <div class="service {{ position }}" data-sal="fade" data-sal-easing="ease-in-cubic">
+                    <img src="{{ service.image ? service.image|media : default_image | theme }}" class="service__image" alt="Service Item">
+                    <h3 class="service__title">{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

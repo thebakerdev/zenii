@@ -1,0 +1,21 @@
+<section id="pricing" class="pricing section bg-gray">
+    <div class="container mx-auto">
+        <h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.pricing_title }}</h2>
+        <div class="pricing__items">
+            {% for plan in this.theme.pricing_plans %}
+                <div class="pricing__item {{ plan.highlighted ? 'pricing__item--active' }}" data-sal="fade" data-sal-easing="ease-in-cubic" data-sal-duration="400">
+                    <div class="pricing__item-content">
+                        <h3 class="pricing__item-title">{{ plan.plan_title }}</h3>
+                        <p class="pricing__item-price"><span>{{ plan.currency }}</span><span>{{ plan.price }}</span>/{{ plan.plan_type }}</p>
+                        <ul class="pricing__item-features">
+                            {% for feature in plan.plan_features|split(',') %}
+                                <li>{{ feature }}</li>
+                            {% endfor %} 
+                        </ul>
+                    </div>
+                    <a href="{{ plan.button_url }}" class="btn {{ plan.highlighted ? '': 'btn--primary'}}">{{ plan.button_text }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

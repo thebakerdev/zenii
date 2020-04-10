@@ -1,0 +1,24 @@
+<section id="contact" class="contact container section mx-auto">
+    <div class="contact__content">
+        <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.contact_title }}</h2>
+        <p class="mb-4 w-full md:w-3/4" data-sal="slide-up" data-sal-easing="ease-in-cubic">{{ this.theme.contact_description }}</p>
+        <form id="contact_form" class="w-full md:w-3/4" novalidate data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">
+            <div class="input-group mb-2">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="input" name="name">
+            </div>
+            <div class="input-group mb-2">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input" name="email">
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="h-20" name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary mt-8">Send</button>
+        </form>
+    </div>
+    <div class="contact__image">
+        <img src="{{ this.theme.contact_image ? this.theme.contact_image|media : 'assets/dist/images/contact.svg'|theme }}" class="mx-auto" alt="Contact Image" data-sal="slide-up" data-sal-delay="400" data-sal-duration="500">
+    </div> 
+</section>

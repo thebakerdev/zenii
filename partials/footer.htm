@@ -1,0 +1,61 @@
+<footer class="footer bg-tertiary text-white">
+    <div class="container section mx-auto py-10">
+        <div class="footer__content">
+            <h4 class="text-lg font-bold mb-4">{{this.theme.company_contact_title }}</h4>
+            <ul class="text-sm">
+                <li class="mb-2">
+                    <div class="item">
+                        <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_address_icon }}</i>
+                        <div class="item__content">
+                            <p class="item__text">{{ this.theme.company_address }}</p>
+                        </div> 
+                    </div>
+                </li>
+                <li class="mb-2">
+                    <div class="item">
+                        <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_contact_number_icon }}</i>
+                        <div class="item__content">
+                            <p class="item__text">{{ this.theme.company_contact_number }}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-2">
+                    <div class="item">
+                        <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_email_icon }}</i>
+                        <div class="item__content">
+                            <p class="item__text">{{ this.theme.company_email }}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__content">
+            <h4 class="text-lg font-bold mb-4">Menu Links</h4>
+            <ul class="text-sm">
+                <li class="mb-2"><a class="hover:text-primary" href="#about">About</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#services">Services</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer__content">
+            <h4 class="text-lg font-bold mb-4">{{ this.theme.social_title }}</h4>
+            <ul class="flex text-sm">
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_facebook }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/facebook.svg'|theme }}" alt="Twitter Icon">
+                    </a>
+                </li>
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_twitter }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/twitter.svg'|theme }}" alt="Twitter Icon">
+                    </a>
+                </li>
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_instagram }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/instagram.svg'|theme }}" alt="Instagram Icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

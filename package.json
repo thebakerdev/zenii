@@ -1,0 +1,42 @@
+{
+  "name": "zenii",
+  "version": "1.0.0",
+  "description": "'A free flat landing page theme using Tailwindcss'",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebakerdev/zenii.git"
+  },
+  "author": "'The Bakerdev'",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebakerdev/zenii/issues"
+  },
+  "homepage": "https://github.com/thebakerdev/zenii#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "glider-js": "^1.7.2",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-purgecss": "^5.0.0-rc.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "sal.js": "^0.7.4",
+    "smooth-scroll": "^16.1.3",
+    "validate.js": "^0.13.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.2.0"
+  }
+}

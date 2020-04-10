@@ -1,0 +1,25 @@
+.glider {
+    overflow: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        height: 0 !important;
+    }
+}
+
+.glider-dot:hover, 
+.glider-dot:focus, 
+.glider-dot.active {
+    background: #8C87E6 !important;
+    outline: none !important;
+}
+
+.glider-prev {
+    left: -18px !important;
+    outline: none !important;
+}
+
+.glider-next {
+    outline: none !important;
+    right: -18px !important;
+}

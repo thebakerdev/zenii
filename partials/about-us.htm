@@ -1,0 +1,24 @@
+<section id="about" class="about-us bg-gray">
+    <div class="container section mx-auto">
+        <div class="about-us__content">
+            <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.about_title }}</h2>
+            <p data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">{{ this.theme.about_description }}</p>
+            <ul class="mt-10 md:ml-8">
+                {% for about_item in this.theme.about_items %}
+                    <li class="mb-6">
+                        <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
+                            <i class="item__icon material-icons text-primary">{{ about_item.icon }}</i>
+                            <div class="item__content">
+                                <h3 class="item__title">{{ about_item.title }}</h3>
+                                <p class="item__text md:w-3/4">{{ about_item.description }}</p>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="about-us__image">
+            <img src="{{ this.theme.about_image ? this.theme.about_image|media : 'assets/dist/images/about.svg'|theme }}" class="mx-auto" alt="About Us Image" data-sal="slide-up" data-sal-delay="400" data-sal-duration="500">
+        </div>
+    </div>
+</section>

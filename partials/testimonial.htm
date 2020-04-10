@@ -1,0 +1,25 @@
+<section id="testimonials" class="testimonials container section mx-auto">
+    <div class="w-full md:w-1/2 pl-0 md:pl-16 text-center md:text-left">
+        <h2 class="w-full md:w-3/4 font-bold text-5xl leading-none mb-6" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.testimonial_title }}</h2>
+        <p class="w-full md:w-3/4" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.testimonial_description }}</p>
+    </div>
+    <div class="w-full md:w-1/2 pt-12 md:pt-0">
+        <div class="testimonial__slider" data-sal="fade" data-sal-easing="ease-in-cubic">
+            <div class="glider">
+                {% for testimonial in this.theme.testimonials %} 
+                <div class="testimonial">
+                    <div class="testimonial__content">
+                        <img src="{{ testimonial.image ? testimonial.image|media : 'https://i.pravatar.cc/100?img=8' }}" alt="Customer Testimonial Image" class="testimonial__image">
+                        <strong class="testimonial__name">{{ testimonial.name }}</strong>
+                        <p class="testimonial__company text-secondary mb-4">{{ testimonial.company }}</p>
+                        <em class="testimonial__comment text-sm">{{ testimonial.comment }}</em>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="glider-prev material-icons">keyboard_arrow_left</button>
+            <button class="glider-next material-icons">keyboard_arrow_right</button> 
+            <div class="glider__dots"></div>
+        </div>
+    </div>
+</section>

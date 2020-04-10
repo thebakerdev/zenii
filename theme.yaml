@@ -1,0 +1,7 @@
+name: Zenii
+description: 'A free flat landing page theme using Tailwindcss'
+previewImage: 'assets/dist/images/preview.jpg'
+author: 'The Bakerdev'
+homepage: 'http://octobercms.com'
+code: ''
+form: fields.yaml

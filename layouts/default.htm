@@ -1,0 +1,29 @@
+description = "Default layout"
+==
+<!doctype html>
+<html lang="en">
+    <head>
+        {% partial 'meta' %}
+    </head>
+    <body class="font-body">
+        <div class="wrapper overflow-hidden">
+            <h1 class="hidden">{{ this.page.title }}</h1>
+            {% partial 'header' %}
+
+            {% partial 'hero' %}
+
+            {% partial 'about-us' %}
+
+            {% partial 'testimonial' %}
+
+            {% partial 'services' %}
+
+            {% partial 'pricing' %}
+
+            {% partial 'contact' %}
+
+            {% partial 'footer' %}
+        </div>
+    {% partial 'scripts' %}
+    </body>
+</html>
