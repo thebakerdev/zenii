@@ -74,3 +74,7 @@ npm run prod
 - [unDraw](https://undraw.co/)
 - [Validate.js](https://validatejs.org/)
 - [Sal.js](https://mciastek.github.io/sal/)
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
