@@ -1,0 +1,29 @@
+.nav__menu {
+
+    li {
+        &:hover {
+            color: $override-color-primary;
+        }
+    }
+}
+
+.nav__menu-button {
+
+    span {
+        background-color: $override-color-tertiary;
+    }
+}
+
+@media (min-width: 640px) {
+    .nav__menu {
+        li {
+            &:hover::after {
+                background-color: $override-color-primary;
+            }
+
+            &:hover {
+                color: $override-color-tertiary
+            }
+        }
+    }
+}

@@ -2,16 +2,29 @@
     <div>
         <h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.service_title }}</h2>
         <div class="services__items">
-            {% for service in this.theme.services %}
-                {% set index = loop.index %}
-                {% set position = index % 2 ? 'service--left': 'service--right'  %}
-                {% set default_image = 'assets/dist/images/service'~index~'.svg' %}
-                <div class="service {{ position }}" data-sal="fade" data-sal-easing="ease-in-cubic">
-                    <img src="{{ service.image ? service.image|media : default_image | theme }}" class="service__image" alt="Service Item">
-                    <h3 class="service__title">{{ service.title }}</h3>
-                    <p>{{ service.description }}</p>
+            {% if this.theme.services|length > 0 %}
+                {% for service in this.theme.services %}
+                    {% set index = loop.index %}
+                    {% set position = index % 2 ? 'service--left': 'service--right'  %}
+                    {% set default_image = 'assets/dist/images/service'~index~'.svg' %}
+                    <div class="service {{ position }}" data-sal="fade" data-sal-easing="ease-in-cubic">
+                        <img src="{{ service.image ? service.image|media : default_image | theme }}" class="service__image" alt="Service Item">
+                        <h3 class="service__title text-primary">{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="service service--left" data-sal="fade" data-sal-easing="ease-in-cubic">
+                    <img src="{{ 'assets/dist/images/service1.svg'| theme }}" class="service__image" alt="Service Item">
+                    <h3 class="service__title text-primary">Service 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fuga exercitationem deserunt, at soluta aliquam?</p>
                 </div>
-            {% endfor %}
+                <div class="service service--right" data-sal="fade" data-sal-easing="ease-in-cubic">
+                    <img src="{{ 'assets/dist/images/service2.svg'| theme }}" class="service__image" alt="Service Item">
+                    <h3 class="service__title text-primary">Service 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fuga exercitationem deserunt, at soluta aliquam?</p>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>

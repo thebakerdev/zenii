@@ -37,7 +37,54 @@ tabs:
             - themes
             - templates
             - free octobercms themes
+        # TAB: THEME COLORS
+        override_color: 
+            tab: Theme Colors
+            label: Override default theme colors
+            type: switch
+            options:
+                on: true
+                off: false
+        override_color_primary:
+            tab: Theme Colors
+            label: Primary 
+            type: colorpicker
+            availableColors: ["#6C63FF","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#6C63FF"
+            assetVar: "override-color-primary"
+        
+        override_color_secondary:
+            tab: Theme Colors
+            label: Secondary 
+            type: colorpicker
+            availableColors: ["#8C87E6","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#8C87E6"
+            assetVar: "override-color-secondary"
 
+        override_color_tertiary:
+            tab: Theme Colors
+            label: Tertiary 
+            type: colorpicker
+            availableColors: ["#444444","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#444444"
+            assetVar: "override-color-tertiary"
+        
+        override_color_error:
+            tab: Theme Colors
+            label: Error 
+            type: colorpicker
+            availableColors: ["#FF6363","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#FF6363"
+            assetVar: "override-color-error"
+
+        override_color_text:
+            tab: Theme Colors
+            label: Text 
+            type: colorpicker
+            availableColors: ["#444444","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#444444"
+            assetVar: "override-color-text"
+        
         # TAB: COMPANY INFO
         company_contact_title:
             tab: Company Info
@@ -117,7 +164,6 @@ tabs:
             tab: Hero
             label: Button URL
             type: text
-            default: #
             span: right
         
         hero_image:
@@ -313,16 +359,13 @@ tabs:
             tab: Social
             label: Facebook URL
             type: text
-            default: #
 
         social_twitter:
             tab: Social
             label: Twitter URL
             type: text
-            default: #
 
         social_instagram:
             tab: Social
             label: Instagram URL
             type: text
-            default: #

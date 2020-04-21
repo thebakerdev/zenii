@@ -1,0 +1,6 @@
+
+.section__title {
+    &::before {
+        background-color: $override-color-primary;
+    }
+}

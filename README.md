@@ -43,7 +43,7 @@ Make sure to add the font links in the **partials/meta.htm** when changing fonts
 
 More Tailwindcss configuration can be found [here](https://tailwindcss.com/docs/configuration)
 
-All scriptis and styles can be found inside **assets/src** folder. 
+All scripts and styles can be found inside **assets/src** folder. 
 
 ### Compiling Assets
 Use Lavel Mix's default command to compile your asset for development. The theme uses PostCSS to process the css and runs PurgeCSS to remove unwanted css on the production build to minimize the css file size. 
@@ -53,7 +53,7 @@ Development Build
 npm run dev 
 ```
 
-Watching Developent Build
+Watching Development Build
 ```
 npm run watch
 ```

@@ -1,0 +1,13 @@
+
+.glider-dot:hover, 
+.glider-dot:focus, 
+.glider-dot.active {
+    background: $override-color-secondary;
+}
+
+.glider-prev:hover, 
+.glider-next:hover, 
+.glider-prev:focus, 
+.glider-next:focus {
+    color: $override-color-secondary;
+}

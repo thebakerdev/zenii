@@ -1,0 +1,15 @@
+/* Button Override */
+.btn {
+
+    &:hover {
+        background-color: $override_color_tertiary;
+    }
+
+    &--primary {
+        background-color: $override_color_primary;
+    }
+
+    &--primary:hover {
+        background-color: $override_color_secondary;
+    }
+}

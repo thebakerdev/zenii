@@ -1,0 +1,26 @@
+.pricing__item {
+    background-color: #FFFFFF;
+
+    &--active {
+        background-color: $override-color-primary;
+        color: #FFFFFF;
+    }
+}
+
+
+.pricing__item-price {
+
+    span:first-child {
+        color: $override-color-primary;
+    }
+
+    span:nth-child(2) {
+        color: $override-color-primary;
+    }
+}
+
+.pricing__item--active .pricing__item-price {
+    span {
+        color: #FFFFFF;
+    }
+}

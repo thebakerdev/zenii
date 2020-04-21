@@ -4,17 +4,47 @@
             <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.about_title }}</h2>
             <p data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">{{ this.theme.about_description }}</p>
             <ul class="mt-10 md:ml-8">
-                {% for about_item in this.theme.about_items %}
+                {% if this.theme.about_items|length > 0 %}
+                    {% for about_item in this.theme.about_items %}
+                        <li class="mb-6">
+                            <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
+                                <i class="item__icon material-icons text-primary">{{ about_item.icon }}</i>
+                                <div class="item__content">
+                                    <h3 class="item__title">{{ about_item.title }}</h3>
+                                    <p class="item__text md:w-3/4">{{ about_item.description }}</p>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% else %}
                     <li class="mb-6">
                         <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
-                            <i class="item__icon material-icons text-primary">{{ about_item.icon }}</i>
+                            <i class="item__icon material-icons text-primary">fingerprint</i>
                             <div class="item__content">
-                                <h3 class="item__title">{{ about_item.title }}</h3>
-                                <p class="item__text md:w-3/4">{{ about_item.description }}</p>
+                                <h3 class="item__title">About 1</h3>
+                                <p class="item__text md:w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae a perferendis similique minus eaque. Illum accusantium cupiditate quis dolorem consequatur.</p>
                             </div>
                         </div>
                     </li>
-                {% endfor %}
+                    <li class="mb-6">
+                        <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
+                            <i class="item__icon material-icons text-primary">timeline</i>
+                            <div class="item__content">
+                                <h3 class="item__title">About 2</h3>
+                                <p class="item__text md:w-3/4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis cum, rem praesentium culpa fuga aliquam.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-6">
+                        <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
+                            <i class="item__icon material-icons text-primary">textsms</i>
+                            <div class="item__content">
+                                <h3 class="item__title">About 3</h3>
+                                <p class="item__text md:w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, ex.</p>
+                            </div>
+                        </div>
+                    </li>
+                {% endif %}
             </ul>
         </div>
         <div class="about-us__image">

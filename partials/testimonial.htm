@@ -6,16 +6,27 @@
     <div class="w-full md:w-1/2 pt-12 md:pt-0">
         <div class="testimonial__slider" data-sal="fade" data-sal-easing="ease-in-cubic">
             <div class="glider">
-                {% for testimonial in this.theme.testimonials %} 
-                <div class="testimonial">
-                    <div class="testimonial__content">
-                        <img src="{{ testimonial.image ? testimonial.image|media : 'https://i.pravatar.cc/100?img=8' }}" alt="Customer Testimonial Image" class="testimonial__image">
-                        <strong class="testimonial__name">{{ testimonial.name }}</strong>
-                        <p class="testimonial__company text-secondary mb-4">{{ testimonial.company }}</p>
-                        <em class="testimonial__comment text-sm">{{ testimonial.comment }}</em>
+                {% if (this.theme.testimonials|length > 0) %}
+                    {% for testimonial in this.theme.testimonials %} 
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <img src="{{ testimonial.image ? testimonial.image|media : 'https://i.pravatar.cc/100?img=8' }}" alt="Customer Testimonial Image" class="testimonial__image">
+                            <strong class="testimonial__name">{{ testimonial.name }}</strong>
+                            <p class="testimonial__company text-secondary mb-4">{{ testimonial.company }}</p>
+                            <em class="testimonial__comment text-sm">{{ testimonial.comment }}</em>
+                        </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <img src="{{ testimonial.image ? testimonial.image|media : 'https://i.pravatar.cc/100?img=8' }}" alt="Customer Testimonial Image" class="testimonial__image">
+                            <strong class="testimonial__name">John Doe</strong>
+                            <p class="testimonial__company text-secondary mb-4">The Company</p>
+                            <em class="testimonial__comment text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis assumenda iure ad voluptatibus cum dicta iusto iste est eveniet.</em>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
             <button class="glider-prev material-icons">keyboard_arrow_left</button>
             <button class="glider-next material-icons">keyboard_arrow_right</button> 
