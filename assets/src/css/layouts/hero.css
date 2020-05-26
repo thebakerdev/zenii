@@ -20,6 +20,7 @@
     img {
         max-height: 342px;
         max-width: 476px;
+        @apply w-full;
     }
 }
 
