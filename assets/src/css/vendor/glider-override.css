@@ -10,8 +10,8 @@
 .glider-dot:hover, 
 .glider-dot:focus, 
 .glider-dot.active {
-    background: #8C87E6;
     outline: none !important;
+    @apply bg-secondary;
 }
 
 .glider-prev {
@@ -28,5 +28,5 @@
 .glider-next:hover, 
 .glider-prev:focus, 
 .glider-next:focus {
-    color: #8C87E6;
+    @apply text-secondary;
 }
