@@ -9,8 +9,8 @@
                     {% set default_image = 'assets/dist/images/service'~index~'.svg' %}
                     <div class="service {{ position }}" data-sal="fade" data-sal-easing="ease-in-cubic">
                         <img src="{{ service.image ? service.image|media : default_image | theme }}" class="service__image" alt="Service Item">
-                        <h3 class="service__title text-primary">{{ service.title }}</h3>
-                        <p>{{ service.description }}</p>
+                        <h3 class="service__title text-primary">{{ service.title|_ }}</h3>
+                        <p>{{ service.description|_ }}</p>
                     </div>
                 {% endfor %}
             {% else %}

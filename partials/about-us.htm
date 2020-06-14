@@ -1,8 +1,8 @@
 <section id="about" class="about-us bg-gray">
     <div class="container section mx-auto">
         <div class="about-us__content">
-            <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.about_title }}</h2>
-            <p data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">{{ this.theme.about_description }}</p>
+            <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.about_title|_ }}</h2>
+            <p data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">{{ this.theme.about_description|_ }}</p>
             <ul class="mt-10 md:ml-8">
                 {% if this.theme.about_items|length > 0 %}
                     {% for about_item in this.theme.about_items %}
@@ -10,8 +10,8 @@
                             <div class="item" data-sal="slide-up" data-sal-easing="ease-in-cubic">
                                 <i class="item__icon material-icons text-primary">{{ about_item.icon }}</i>
                                 <div class="item__content">
-                                    <h3 class="item__title">{{ about_item.title }}</h3>
-                                    <p class="item__text md:w-3/4">{{ about_item.description }}</p>
+                                    <h3 class="item__title">{{ about_item.title|_ }}</h3>
+                                    <p class="item__text md:w-3/4">{{ about_item.description|_ }}</p>
                                 </div>
                             </div>
                         </li>

@@ -1,13 +1,13 @@
 <footer class="footer bg-tertiary text-white">
     <div class="container section mx-auto py-10">
         <div class="footer__content">
-            <h4 class="text-lg font-bold mb-4">{{this.theme.company_contact_title }}</h4>
+            <h4 class="text-lg font-bold mb-4">{{this.theme.company_contact_title|_ }}</h4>
             <ul class="text-sm">
                 <li class="mb-2">
                     <div class="item">
                         <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_address_icon }}</i>
                         <div class="item__content">
-                            <p class="item__text">{{ this.theme.company_address }}</p>
+                            <p class="item__text">{{ this.theme.company_address|_ }}</p>
                         </div> 
                     </div>
                 </li>
@@ -15,7 +15,7 @@
                     <div class="item">
                         <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_contact_number_icon }}</i>
                         <div class="item__content">
-                            <p class="item__text">{{ this.theme.company_contact_number }}</p>
+                            <p class="item__text">{{ this.theme.company_contact_number|_ }}</p>
                         </div>
                     </div>
                 </li>
@@ -23,22 +23,22 @@
                     <div class="item">
                         <i class="item__icon material-icons text-white text-2xl">{{ this.theme.company_email_icon }}</i>
                         <div class="item__content">
-                            <p class="item__text">{{ this.theme.company_email }}</p>
+                            <p class="item__text">{{ this.theme.company_email|_ }}</p>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="footer__content">
-            <h4 class="text-lg font-bold mb-4">Menu Links</h4>
+            <h4 class="text-lg font-bold mb-4">{{ 'Menu Links'|_ }}</h4>
             <ul class="text-sm">
-                <li class="mb-2"><a class="hover:text-primary" href="#about">About</a></li>
-                <li class="mb-2"><a class="hover:text-primary" href="#services">Services</a></li>
-                <li class="mb-2"><a class="hover:text-primary" href="#contact">Contact</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#about">{{ 'About'|_ }}</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#services">{{ 'Services'|_ }}</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#contact">{{ 'Contact'|_ }}</a></li>
             </ul>
         </div>
         <div class="footer__content">
-            <h4 class="text-lg font-bold mb-4">{{ this.theme.social_title }}</h4>
+            <h4 class="text-lg font-bold mb-4">{{ this.theme.social_title|_ }}</h4>
             <ul class="flex text-sm">
                 <li class="mb-2 mr-4">
                     <a href="{{ this.theme.social_facebook }}" target="_blank">

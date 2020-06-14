@@ -6,15 +6,15 @@
                 {% for plan in this.theme.pricing_plans %}
                     <div class="pricing__item {{ plan.highlighted ? 'pricing__item--active' }}" data-sal="fade" data-sal-easing="ease-in-cubic" data-sal-duration="400">
                         <div class="pricing__item-content">
-                            <h3 class="pricing__item-title">{{ plan.plan_title }}</h3>
-                            <p class="pricing__item-price"><span>{{ plan.currency }}</span><span>{{ plan.price }}</span>/{{ plan.plan_type }}</p>
+                            <h3 class="pricing__item-title">{{ plan.plan_title|_ }}</h3>
+                            <p class="pricing__item-price"><span>{{ plan.currency|_ }}</span><span>{{ plan.price|_ }}</span>/{{ plan.plan_type|_ }}</p>
                             <ul class="pricing__item-features">
                                 {% for feature in plan.plan_features|split(',') %}
-                                    <li>{{ feature }}</li>
+                                    <li>{{ feature|_ }}</li>
                                 {% endfor %} 
                             </ul>
                         </div>
-                        <a href="{{ plan.button_url }}" class="btn {{ plan.highlighted ? '': 'btn--primary'}}">{{ plan.button_text }}</a>
+                        <a href="{{ plan.button_url }}" class="btn {{ plan.highlighted ? '': 'btn--primary'}}">{{ plan.button_text|_ }}</a>
                     </div>
                 {% endfor %}
             {% else %}
