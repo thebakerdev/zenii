@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.1.2] - 2020-06-25
+### Fixed
+- Fixed missing anchor tag in hero CTA button
 ## [1.1.1] - 2020-06-07
 ### Changed
 - Updated Tailwindcss version to 1.4.6
