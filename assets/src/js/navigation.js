@@ -1,10 +1,10 @@
-import eventbus from './eventbus';
-
 const navigation = (function() {
 
     const nav_menu_button = document.getElementById('nav_menu_button');
 
     const nav_menu = document.getElementById('nav_menu');
+
+    const nav_menu_items = document.querySelectorAll('.nav__menu li a');
 
     const closeMenu = () => {
         
@@ -23,7 +23,12 @@ const navigation = (function() {
             document.body.classList.toggle('disable-scroll');
         });
 
-        eventbus.on('menu_click', closeMenu);
+
+        nav_menu_items.forEach(menu_item => {
+            menu_item.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
     }
 
     return {

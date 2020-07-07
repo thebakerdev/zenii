@@ -7,6 +7,8 @@ const validation = (function() {
 
         const form = document.getElementById('contact_form');
 
+        if (form === null) return false;
+
         const constraints = {
             name: {
                 presence: true
@@ -71,8 +73,6 @@ const validation = (function() {
         let message = document.createElement('span');
 
         message.innerHTML = error_message;
-
-        //message.classList.add('text-sm', 'text-error', 'block', 'mt-2')
 
         return message;
     }

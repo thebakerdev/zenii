@@ -1,1 +1,6 @@
+{% if this.theme.disable_framework_extras == '0' %}
+    <script src="{{ 'assets/dist/js/jquery-3.5.1.min.js'|theme }}"></script>
+    {% framework extras %}
+{% endif %}
 <script src="{{ 'assets/dist/js/app.js'|theme }}"></script>
+

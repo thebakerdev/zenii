@@ -1,5 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.2.0] - 2020-07-07
+### Added 
+- Added extra options to enable/disable smooth scroll, scroll animations & jquery + October's Ajax framework
+- Moved sal.js initialization to its own file scrollAnimation.js
+- Added settings js to check extras settings
+### Removed
+- Removed eventbus.js
 ## [1.1.2] - 2020-06-25
 ### Fixed
 - Fixed missing anchor tag in hero CTA button

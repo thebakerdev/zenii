@@ -2,3 +2,4 @@
 1.1.0: Added theme color picker
 1.1.1: Updated Tailwindcss version to 1.4.6
 1.1.2: Minor Bug fixes
+1.2.0: Added extra options to enable/disable smooth scroll, scroll animations & jquery + October's Ajax framework

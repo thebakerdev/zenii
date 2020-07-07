@@ -369,3 +369,27 @@ tabs:
             tab: Social
             label: Instagram URL
             type: text
+        disable_framework_extras:
+            tab: Extras
+            label: Disable framework extras
+            type: switch
+            default: true
+            options:
+                on: true
+                off: false
+        disable_smooth_scrolling:
+            tab: Extras 
+            label: Disable smooth scrolling
+            type: switch
+            default: false 
+            options:
+                on: true
+                off: false
+        disable_scroll_animation:
+            tab: Extras 
+            label: Disable scroll animation
+            type: switch 
+            default: false 
+            options:
+                on: true 
+                off: false

@@ -24,6 +24,10 @@ description = "Default layout"
 
             {% partial 'footer' %}
         </div>
+        <input type="hidden" id="extra_settings" 
+            data-disable-framework-extras="{{ this.theme.disable_framework_extras }}"
+            data-disable-smooth-scrolling="{{ this.theme.disable_smooth_scrolling }}"
+            data-disable-scroll-animation="{{ this.theme.disable_scroll_animation }}">
     {% partial 'scripts' %}
     </body>
 </html>
