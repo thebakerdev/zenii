@@ -10,6 +10,7 @@ let postCssPlugins = [
 mix.setPublicPath('./')
     .js('assets/src/js/app.js', 'assets/dist/js')
     .postCss('assets/src/css/style.css', 'assets/dist/css', postCssPlugins)
+    .postCss('assets/src/css/sal.css', 'assets/dist/css', postCssPlugins)
     .browserSync({
         proxy: 'http://octothemes.oo:96/', //replace with your url
         files: [

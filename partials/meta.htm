@@ -9,4 +9,8 @@
 <link rel="icon" type="image/png" href="{{ 'assets/dist/images/favicon.png'|theme }}" />
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Rubik:400,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="{{ this.theme.override_color ? ['assets/dist/css/style.css','assets/src/scss/style.scss']|theme :'assets/dist/css/style.css'|theme }}">
+{% if this.theme.disable_scroll_animation == '0' %}
+    <link rel="stylesheet" href="{{ this.theme.override_color ? ['assets/dist/css/style.css','assets/dist/css/sal.css','assets/src/scss/style.scss']|theme :['assets/dist/css/style.css','assets/dist/css/sal.css']|theme }}">
+{% else %}
+    <link rel="stylesheet" href="{{ this.theme.override_color ? ['assets/dist/css/style.css','assets/src/scss/style.scss']|theme :'assets/dist/css/style.css'|theme }}">
+{% endif %}

@@ -1,10 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.2.0] - 2020-07-07
+### Changed
+- Sal.js styles are not imported when scroll animation is disabled
 ### Added 
 - Added extra options to enable/disable smooth scroll, scroll animations & jquery + October's Ajax framework
 - Moved sal.js initialization to its own file scrollAnimation.js
 - Added settings js to check extras settings
+- sal.css in dist folder for conditional use
 ### Removed
 - Removed eventbus.js
 ## [1.1.2] - 2020-06-25
