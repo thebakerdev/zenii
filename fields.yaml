@@ -373,23 +373,23 @@ tabs:
             tab: Extras
             label: Disable framework extras
             type: switch
-            default: true
+            default: 1
             options:
-                on: true
-                off: false
+                on: true 
+                off: false 
         disable_smooth_scrolling:
             tab: Extras 
             label: Disable smooth scrolling
             type: switch
-            default: false 
+            default: 0
             options:
-                on: true
-                off: false
+                on: true 
+                off: false 
         disable_scroll_animation:
             tab: Extras 
             label: Disable scroll animation
             type: switch 
-            default: false 
+            default: 0
             options:
                 on: true 
-                off: false
+                off: false 
