@@ -4,11 +4,11 @@ const settings = (function(){
 
         const extras = document.getElementById('extra_settings');
         
-        if (extras.getAttribute(`data-disable-${attribute}`) == '0' || extras.getAttribute(`data-disable-${attribute}`) == null) {
-            return false;
+        if (extras.getAttribute(`data-disable-${attribute}`) == '1') {
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     return {
